@@ -12,8 +12,8 @@ This system will ingest data coming from a web server and plot the text data on 
 1) Establish the RTSP stream to the camera's local IP;
 2) Make an HTTP GET Request to an external web server to download the information that needs to be annotated;
 3) Take one frame out of the stream (from step 1), add the data (obtained on step 2) and show the output to the user.
-4) Repeat indefinitely (until user closes the program or presses q on the keyboard).
 
+Repeat steps 2 and 3 indefinitely (until user closes the program or presses `q` on the keyboard).
 
 To easily install or upgrade to the latest release, use [pip](http://www.pip-installer.org/).
 

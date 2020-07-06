@@ -140,12 +140,18 @@ def fetch_annotations(server_url):
                # print(annotations)
                 items.close()
     else:
-        annotations.append('Error')
+        annotations.append('Error when trying to get information from the server')
+        annotations.append(f'Status code: {response.status_code}')
     return annotations
 
 
 if __name__ == '__main__':
+    # URL to the RTSP stream
     link = 'rtsp://192.168.100.5:9000/live'
+
+    # URL to the server that hosts the information you want to add to the video
     pos_server_url = "https://us-central1-ise-mailer-analyzer-206320.cloudfunctions.net/cashier"
+
+    # Let the magic begin
     process_rtsp_stream_with_file_annotation(link, pos_server_url)
 
